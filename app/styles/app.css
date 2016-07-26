@@ -1,0 +1,14 @@
+
+/*TODO: Если все блоки должны скроллится, то почему не сделать body { overflow: hidden; }*/
+
+body {
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+}
+
+.col-mdx-3 {
+    width: 33%;
+}

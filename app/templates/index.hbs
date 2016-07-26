@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-mdx-3" style="background: darkblue; color: white">
+            <form action="">
+                <div class="form-group">
+                    <input type="text" class="form-control">
+                </div>
+            </form>
+            <div style="height: calc(100vh - 34px);">
+            {{#as-scrollable onScrolledToBottom=(action 'firstFakeDataHandler')}}
+            {{#each (take firstCount model) as |user|}}
+                <div>{{user.firstName}} - {{user.lastName}}</div>
+            {{/each}}
+            {{/as-scrollable}}
+            </div>
+        </div>
+        <div class="col-mdx-3" style="height: 100vh">
+            {{#as-scrollable onScrolledToBottom=(action 'secondFakeDataHandler')}}
+                {{#each (take secondCount model) as |user|}}
+                    <div>{{user.firstName}} - {{user.lastName}}</div>
+                {{/each}}
+            {{/as-scrollable}}
+        </div>
+        <div class="col-md-6">
+
+        </div>
+    </div>
+</div>
